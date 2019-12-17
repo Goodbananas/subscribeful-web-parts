@@ -320,3 +320,20 @@ input[type="date"]:before {
  {
    list-style-type: none;
  }
+
+ .text-center
+ {
+    text-align: center;
+ }
+
+ .buy-features
+ {
+    width: 800px;
+    margin: 0 40px;
+ }
+
+ .button-success
+  {
+   color: #FFF;
+   background-color: rgb(26, 184, 26);
+}
