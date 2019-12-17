@@ -1,0 +1,35 @@
+<!-- Navbar -->
+<nav class="navbar">
+      <div class="navbar-container">
+         <span class="navbar-toggle" id="js-navbar-toggle">
+               <i class="fas fa-bars"></i>
+         </span>
+         <a href="#" class="logo">Subscribeful</a>
+         <ul class="main-nav" id="js-menu">
+               <li>
+                  <a href="#" class="nav-links">Home</a>
+               </li>
+               <li>
+                  <a href="#" class="nav-links">Customers</a>
+               </li>
+               <li>
+                  <a href="#" class="nav-links"><i class="fas fa-bell"></i></a>
+               </li>
+               <li>
+                  <a href="#" class="nav-links nav-profile">
+                     
+                        <img src="images/user-image.png" alt="Heath">
+                  </a>
+               </li>
+         </ul>
+      </div>
+   </nav>
+   <script>
+      let mainNav = document.getElementById("js-menu");
+      let navBarToggle = document.getElementById("js-navbar-toggle");
+
+      navBarToggle.addEventListener("click", function() {
+            mainNav.classList.toggle("active");
+      });
+   </script>
+   <!-- Navbar end -->
