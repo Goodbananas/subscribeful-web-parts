@@ -148,7 +148,7 @@ font-size: 24px;
 
 .ghost-button
 {
-   color: #FFF;
+   color: rgb(93, 165, 247);
    display: inline-block;
    height: 38px;
    font-size: 11px;
@@ -169,4 +169,5 @@ font-size: 24px;
 .ghost-button:hover
 {
    background: rgba(255, 255, 255, 0.4);
+   text-decoration: underline;
 }
