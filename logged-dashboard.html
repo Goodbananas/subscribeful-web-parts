@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Document</title>
+      <link rel="stylesheet" type="text/css" href="css/normalize.css">
+      <link rel="stylesheet" type="text/css" href="css/skeleton.css">
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+      <script src="https://kit.fontawesome.com/a076d05399.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+   </head>
+
+   <body>
+      <!-- Navbar -->
+      <nav class="navbar">
+         <div class="navbar-container">
+            <span class="navbar-toggle" id="js-navbar-toggle">
+                  <i class="fas fa-bars"></i>
+            </span>
+            <a href="#" class="logo">Subscribeful</a>
+            <ul class="main-nav" id="js-menu">
+                  <li>
+                     <a href="./index.html" class="nav-links">Home</a>
+                  </li>
+                  <li>
+                     <a href="./logged-customers.html" class="nav-links">Customers</a>
+                  </li>
+                  <li>
+                     <a href="#" class="nav-links"><i class="fas fa-bell"></i></a>
+                  </li>
+                  <li>
+                     <a href="#" onclick="toggleProfileDropdown()" class="nav-links nav-profile">
+                        <img src="images/user-image.png"  alt="Heath">
+                     </a>
+                     <div class="profile-dropdown-wrapper" >
+                        <ul class="profile-dropdown" id="profile-dropdown">
+                           <li><a href="index.html">Log out</a></li>
+                        </ul>
+                     </div>
+                  </li>
+            </ul>
+         </div>
+      </nav>
+      <script>
+         let mainNav = document.getElementById("js-menu");
+         let navBarToggle = document.getElementById("js-navbar-toggle");
+
+         navBarToggle.addEventListener("click", function() {
+               mainNav.classList.toggle("active");
+         });
+      </script>
+      <!-- Navbar end -->
+      <div class="basic-container">
+         <!-- Date selector -->
+         <div class="row">
+               <div class="four columns">
+                  <label for="startdate">Start Date</label>
+                  <input class="u-full-width" type="date" placeholder="Search for customer..." id="startdate">
+               </div>
+               <div class="four columns">
+                     <label for="enddate">End Date</label>
+                     <input class="u-full-width" type="date" placeholder="Search for customer..." id="enddate">
+                  </div>
+               <div class="four columns">
+                  <label for="enddate">&nbsp;</label>
+                  <input class="u-full-width button-primary" type="submit" value="Update">
+               </div>
+         </div>
+
+         <div class="row">
+               <div class="columns">
+                  <canvas id="myChart"></canvas>
+               </div>
+         </div>
+         </br>
+         <h3>Summary</h3>
+         <div class="row dashboard_summary">
+            <div class="three columns dashboard_summary_item">
+               <p>16</p>
+               <p>Total: $250</p>
+               <p>Customers: 18</p>
+            </div>
+            <div class="three columns dashboard_summary_item">
+               <p>17</p>
+               <p>Total: $250</p>
+               <p>Customers: 18</p>
+            </div>
+            <div class="three columns dashboard_summary_item">
+               <p>18</p>
+               <p>Total: $250</p>
+               <p>Customers: 18</p>
+            </div>
+            <div class="three columns dashboard_summary_item">
+               <p>19</p>
+               <p>Total: $250</p>
+               <p>Customers: 18</p>
+            </div>
+            
+         </div>
+         </br>
+         </br>
+      </div>
+
+      <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['12 Dec', '13 Dec', '14 Dec', '15 Dec', '16 Dec', '17 Dec'],
+                    datasets: [
+                    {
+                     label: 'Left Users',
+                     data: [0, 0, 0, 1, 3, 0],
+                     borderWidth: 1,
+                     backgroundColor: 'rgba(255, 0, 0, 0.9)'
+                   },
+                    {
+                        label: 'Active Users',
+                        data: [0, 2, 5, 8, 9, 14],
+                        borderWidth: 1,
+                        backgroundColor: 'rgba(0, 255, 0, 0.3)'
+                    },
+                    
+                   ]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true,
+                                suggestedMax: 20
+                            },
+                        }]
+                    },
+                    fill: true,
+                    cubicInterpolationMode: 'monotone'
+                }
+            });
+            </script>
+            <script>
+               function toggleProfileDropdown()
+               {
+                  const el = document.getElementById("profile-dropdown");
+                  if (el.classList.contains("profile-dropdown-show")) {
+                     el.classList.remove("profile-dropdown-show");
+                  } else {
+                     el.classList.add("profile-dropdown-show");
+                  }
+               }
+            </script>
+   </body>
+</html>

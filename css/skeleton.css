@@ -169,6 +169,7 @@ a:hover {
 button,
 input[type="submit"],
 input[type="reset"],
+input[type="date"],
 input[type="button"] {
   display: inline-block;
   height: 38px;
@@ -190,12 +191,14 @@ input[type="button"] {
 .button:hover,
 button:hover,
 input[type="submit"]:hover,
+input[type="date"]:hover,
 input[type="reset"]:hover,
 input[type="button"]:hover,
 .button:focus,
 button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
+input[type="date"]:focus,
 input[type="button"]:focus {
   color: #333;
   border-color: #888;
@@ -204,6 +207,7 @@ input[type="button"]:focus {
 button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
+input[type="date"].button-primary,
 input[type="button"].button-primary {
   color: #FFF;
   background-color: #33C3F0;
@@ -213,10 +217,12 @@ button.button-primary:hover,
 input[type="submit"].button-primary:hover,
 input[type="reset"].button-primary:hover,
 input[type="button"].button-primary:hover,
+input[type="date"].button-primary:hover,
 .button.button-primary:focus,
 button.button-primary:focus,
 input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
+input[type="date"].button-primary:hover,
 input[type="button"].button-primary:focus {
   color: #FFF;
   background-color: #1EAEDB;
@@ -231,6 +237,7 @@ input[type="search"],
 input[type="text"],
 input[type="tel"],
 input[type="url"],
+input[type="date"],
 input[type="password"],
 textarea,
 select {
@@ -247,6 +254,7 @@ input[type="number"],
 input[type="search"],
 input[type="text"],
 input[type="tel"],
+input[type="date"],
 input[type="url"],
 input[type="password"],
 textarea {
@@ -263,6 +271,7 @@ input[type="search"]:focus,
 input[type="text"]:focus,
 input[type="tel"]:focus,
 input[type="url"]:focus,
+input[type="date"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {

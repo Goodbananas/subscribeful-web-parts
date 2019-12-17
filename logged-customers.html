@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Document</title>
+      <link rel="stylesheet" type="text/css" href="css/normalize.css">
+      <link rel="stylesheet" type="text/css" href="css/skeleton.css">
+      <link rel="stylesheet" type="text/css" href="css/main.css">
+      <link rel="stylesheet" type="text/css" href="css/solid.min.css">
+      <script src="https://kit.fontawesome.com/a076d05399.js" defer></script>
+   </head>
+
+   <body>
+      <!-- Navbar -->
+      <nav class="navbar">
+         <div class="navbar-container">
+            <span class="navbar-toggle" id="js-navbar-toggle">
+                  <i class="fas fa-bars"></i>
+            </span>
+            <a href="./logged-dashboard.html" class="logo">Subscribeful</a>
+            <ul class="main-nav" id="js-menu">
+                  <li>
+                     <a href="./logged-dashboard.html" class="nav-links">Home</a>
+                  </li>
+                  <li>
+                     <a href="./logged-customers.html" class="nav-links">Customers</a>
+                  </li>
+                  <li>
+                     <a href="#" class="nav-links"><i class="fas fa-bell"></i></a>
+                  </li>
+                  <li>
+                     <a href="#" class="nav-links nav-profile">
+                        <img src="images/user-image.png" alt="Heath">
+                     </a>
+                  </li>
+            </ul>
+         </div>
+      </nav>
+      <script>
+         let mainNav = document.getElementById("js-menu");
+         let navBarToggle = document.getElementById("js-navbar-toggle");
+
+         navBarToggle.addEventListener("click", function() {
+               mainNav.classList.toggle("active");
+         });
+      </script>
+      <!-- Navbar end -->
+      <div class="basic-container">
+         <div class="row">
+            <div class="four columns">
+               <input class="u-full-width" type="text" placeholder="Search for customer..." id="search">
+            </div>
+            <div class="two columns">
+               <input class="u-full-width button-primary" type="submit" value="Find">
+            </div>
+            <div class="three columns">
+                  &nbsp;
+            </div>
+            <div class="three columns">
+                  <a href="register.html"><span class="u-full-width label-body ghost-button">Advanced Search</span></a>
+            </div>
+         </div>
+
+      <!-- CUSTOMER LIST -->
+      <div class="row customers_item">
+         <div class="nine columns">
+            <h4>John Doe</h4>
+            <p>Active Products</p>
+            <span class="badge badge-success ">Product 1</span> 
+            <span class="badge badge-success ">Product 2</span>
+         </div>
+         <div class="three columns">
+               <h4 class="total-spent">$210.00</h4>
+            </div>
+      </div>
+
+      <div class="row customers_item">
+            <div class="nine columns">
+               <h4>Jane Doe</h4>
+               <p>Active Products</p>
+               <span class="badge badge-success ">Product 2</span>
+               
+            </div>
+            <div class="three columns">
+                  <h4 class="total-spent">$17.70</h4>
+               </div>
+         </div>
+
+         <div class="row customers_item">
+            <div class="nine columns">
+               <h4>Isabelle Doe</h4>
+               <p>Active Products</p>
+               <span class="badge badge-success ">Product 1</span> 
+            </div>
+            <div class="three columns">
+               <h4 class="total-spent">$108.20</h4>
+            </div>
+         </div>
+   </div>
+   </body>
+</html>
